@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-star: #f5a524;
+  --color-ink: #111111;
+  --color-footer: #f3f3f3;
+  --color-canvas: #f3f3f3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: #fff;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 2px;
+}
+
+.product-copy ul {
+  margin: 0.4rem 0 0.4rem 1.1rem;
+  list-style: disc;
+}
+
+.product-copy p {
+  margin: 0.35rem 0;
+}
+
+.product-copy a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 220ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .fade-in {
+    animation: none;
+  }
+}
+.dashed-bottom-border {
+  background-image: linear-gradient(to right, #A3A3A3 50%, transparent 50%);
+  background-position: bottom;
+  background-size: 12px 1px;
+  background-repeat: repeat-x;
+}
+.dashed-top-border {
+  background-image: linear-gradient(to right, #A3A3A3 50%, transparent 50%);
+  background-position: top;
+  background-size: 12px 1px;
+  background-repeat: repeat-x;
+}
