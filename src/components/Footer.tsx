@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { useUiStore } from "../store/uiStore";
-import { ArrowIcon, ChevronIcon } from "./Icons";
+import { ChevronIcon } from "./Icons";
 
 const columns = [
   {
@@ -124,7 +124,7 @@ export function Footer() {
   );
 }
 
-function Social({ label, path = "" }: { label?: string; path?: string }) {
+function Social({ label }: { label: string }) {
   return (
     <a
       href="#top"
